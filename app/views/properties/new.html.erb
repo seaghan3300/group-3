@@ -1,0 +1,38 @@
+<h1>Add a New Property</h1>
+
+<%= form_for :property, url: properties_path do |f| %>
+        <% if @property.errors.any? %>
+            <% @property.errors.full_messages.each do |msg| %>
+                <div class="alert alert-danger"><%= msg%></div>
+            <% end %>
+        <% end %>
+    <p>
+        <%= f.label :address %> <br>
+        <%= f.text_field(:address, {:class => 'form-control'}) %>
+    </p>
+    <p>
+        <%= f.label :price %> <br>
+        <%= f.text_field(:price, {:class => 'form-control'}) %>
+    </p>
+    <p>
+        <%= f.label :condition %> <br>
+        <%= f.text_field(:condition, {:class => 'form-control'})  %>
+    </p>
+    <p>
+        <%= f.label :footage %> <br>
+        <%= f.text_field(:footage, {:class => 'form-control'}) %>
+    </p>
+    <p>
+        <%= f.label :bedrooms %> <br>
+        <%= f.text_field(:bedrooms, {:class => 'form-control'}) %>
+    </p>
+    <p>
+        <%= f.label :bathrooms %> <br>
+        <%= f.text_field(:bathrooms, {:class => 'form-control'}) %>
+    </p>
+    <p>
+        <%= f.label :rating %> <br>
+        <%= f.text_field(:rating, {:class => 'form-control'}) %>
+    </p>
+    <p> <%= f.submit({:class => 'btn btn-dark'})%> </p>
+ <% end %>

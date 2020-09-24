@@ -1,0 +1,27 @@
+<h1> Your Saved Properties: </h1>
+<h2>_________________________________________________________________________________________________________</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Address</th>
+    <th>Price</th>
+    <th>Condition</th>
+    <th>Footage</th>
+    <th>Bedrooms</th>
+    <th>Bathrooms</th>
+    <th>Rating</th>
+    <th>Access</th>
+  </tr>
+    <% @properties.each do |property| %>
+    <tr>
+    <td> <%= property.address %> </td>
+    <td> <%= property.price %> </td>
+    <td> <%= property.condition %> </td>
+    <td> <%= property.footage %> </td>
+    <td> <%= property.bedrooms %> </td>
+    <td> <%= property.bathrooms %> </td>
+    <td> <%= property.rating %> </td> 
+    <td> <%= link_to "Details", property_path(property), :class => 'btn btn-dark'  %> </td> 
+    </tr>
+    <% end %>
+</table> 

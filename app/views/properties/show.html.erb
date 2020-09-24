@@ -1,0 +1,15 @@
+<h3> <%= "Address: " %><%= @property.address %> </h3> 
+<h3> <%= "Price: " %><%= @property.price %> </h3>
+<h3> <%= "Condition: " %><%= @property.condition %> </h3>
+<h3> <%= "Footage: " %><%= @property.footage %> </h3>
+<h3> <%= "Bedrooms: " %><%= @property.bedrooms %> </h3>
+<h3> <%= "Bathrooms: " %><%= @property.bathrooms %> </h3>
+<h3> <%= "Rating: " %><%= @property.rating %> </h3>
+
+<%= link_to "Delete", property_path(@property),
+                method: :delete,
+                data: {confirm: 'Are you sure?'},
+                :class => 'btn btn-danger' %>
+                
+<h1>     </h1>
+                
