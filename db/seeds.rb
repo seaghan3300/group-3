@@ -8,6 +8,6 @@
 
 some_properties = [{:address => '1324 Place', :price => '$12312', :condition => 'Medium', :footage => '1500', :bedrooms => '3', :bathrooms=> '2', :rating => '7'}]
 
-some_properties.each do |properties|
-  Property.create!(properties)
+some_properties.each do |property|
+  Property.create!(property)
 end
